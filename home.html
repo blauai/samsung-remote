@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TV Remote</title>
+    <link rel="stylesheet" href="tv_remote.css">
+    <style>
+        button { margin: 10px; padding: 10px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h1>TV Remote Control</h1>
+    <div id="remote-buttons">
+        <button onclick="sendCommand('KEY_POWEROFF')">Power off</button>
+        <button onclick="sendCommand('KEY_UP')">Up</button>
+        <button onclick="sendCommand('KEY_DOWN')">Down</button>
+        <button onclick="sendCommand('KEY_LEFT')">Left</button>
+        <button onclick="sendCommand('KEY_RIGHT')">Right</button>
+        <button onclick="sendCommand('KEY_CHUP')">Page Up</button>
+        <button onclick="sendCommand('KEY_CHDOWN')">Page Down</button>
+        <button onclick="sendCommand('KEY_ENTER')">Enter</button>
+        <button onclick="sendCommand('KEY_RETURN')">Backspace</button>
+        <button onclick="sendCommand('KEY_EXIT')">Exit</button>
+        <button onclick="sendCommand('KEY_CONTENTS')">Smart Hub</button>
+        <button onclick="sendCommand('KEY_CH_LIST')">Channel List</button>
+        <button onclick="sendCommand('KEY_MENU')">Menu</button>
+        <button onclick="sendCommand('KEY_SOURCE')">Source</button>
+        <button onclick="sendCommand('KEY_GUIDE')">Guide</button>
+        <button onclick="sendCommand('KEY_TOOLS')">Tools</button>
+        <button onclick="sendCommand('KEY_INFO')">Info</button>
+        <button onclick="sendCommand('KEY_RED')">A / Red</button>
+        <button onclick="sendCommand('KEY_GREEN')">B / Green</button>
+        <button onclick="sendCommand('KEY_YELLOW')">C / Yellow</button>
+        <button onclick="sendCommand('KEY_BLUE')">D / Blue</button>
+        <button onclick="sendCommand('KEY_PANNEL_CHDOWN')">3D</button>
+        <button onclick="sendCommand('KEY_VOLUP')">Volume Up</button>
+        <button onclick="sendCommand('KEY_VOLDOWN')">Volume Down</button>
+        <button onclick="sendCommand('KEY_MUTE')">Mute</button>
+        <button onclick="sendCommand('KEY_0')">0</button>
+        <button onclick="sendCommand('KEY_1')">1</button>
+        <button onclick="sendCommand('KEY_2')">2</button>
+        <button onclick="sendCommand('KEY_3')">3</button>
+        <button onclick="sendCommand('KEY_4')">4</button>
+        <button onclick="sendCommand('KEY_5')">5</button>
+        <button onclick="sendCommand('KEY_6')">6</button>
+        <button onclick="sendCommand('KEY_7')">7</button>
+        <button onclick="sendCommand('KEY_8')">8</button>
+        <button onclick="sendCommand('KEY_9')">9</button><br>
+        <button onclick="sendCommand('KEY_DTV')">TV Source</button>
+        <button onclick="sendCommand('KEY_HDMI')">HDMI Source</button>
+    </div>
+    <script>
+function sendCommand(cmd) {
+    fetch('/tv', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({command: cmd})
+    }).then(res => res.json()).then(data => {
+//        alert('Sent: ' + data.command);
+    });
+}
+    </script>
+</body>
+</html>

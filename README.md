@@ -69,7 +69,7 @@ This project provides a web-based remote control for Samsung TVs, allowing you t
 
 5.  **Access the web remote:**
 
-    Open your web browser and navigate to `http://<your-computer-ip>:8000/home`. You should see the web remote interface.
+    Open your web browser and navigate to `http://localhost:8000/home`. You should see the web remote interface.
 
 ## Interactive Command-Line Remote
 

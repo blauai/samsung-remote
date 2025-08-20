@@ -27,24 +27,24 @@ config = {
     "timeout": 0
 }
 
-command_map = {}
-#    'power': 'KEY_POWER',
-#    'volume_up': 'KEY_VOLUP',
-#    'volume_down': 'KEY_VOLDOWN',
-#    'mute': 'KEY_MUTE',
-#    'channel_up': 'KEY_CHUP',
-#    'channel_down': 'KEY_CHDOWN',
-#    '1': 'KEY_1',
-#    '2': 'KEY_2',
-#    '3': 'KEY_3',
-#    '4': 'KEY_4',
-#    '5': 'KEY_5',
-#    '6': 'KEY_6',
-#    '7': 'KEY_7',
-#    '8': 'KEY_8',
-#    '9': 'KEY_9',
-#    '0': 'KEY_0'
-#}
+command_map = {
+    'power': 'KEY_POWER',
+    'volume_up': 'KEY_VOLUP',
+    'volume_down': 'KEY_VOLDOWN',
+    'mute': 'KEY_MUTE',
+    'channel_up': 'KEY_CHUP',
+    'channel_down': 'KEY_CHDOWN',
+    '1': 'KEY_1',
+    '2': 'KEY_2',
+    '3': 'KEY_3',
+    '4': 'KEY_4',
+    '5': 'KEY_5',
+    '6': 'KEY_6',
+    '7': 'KEY_7',
+    '8': 'KEY_8',
+    '9': 'KEY_9',
+    '0': 'KEY_0'
+}
 
 
 @app.get("/home", summary="Serve home.html if it exists")

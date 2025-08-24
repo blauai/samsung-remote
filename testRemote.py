@@ -21,6 +21,7 @@ command_list = [
     'KEY_1',
     'KEY_2',
     'KEY_3',
+    'KEY_CONTENTS',
     'KEY_POWER',
 ]
 
